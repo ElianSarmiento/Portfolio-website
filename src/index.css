@@ -65,8 +65,9 @@
     --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
+
     --primary: 250 47% 60%;
-    --primary-foreground: 222 47% 11%;
+
     --border: 214 32% 91%;
   }
   .dark {
@@ -138,6 +139,11 @@
 @utility meteor {
   @apply absolute bg-gradient-to-r from-white via-white to-transparent rounded-full;
   box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.3);
+}
+
+.dark .meteor {
+  background: linear-gradient(90deg, #f97316, #fcd34d, transparent);
+  box-shadow: 0 0 10px 2px rgba(255, 149, 58, 0.45);
 }
 
 #root {

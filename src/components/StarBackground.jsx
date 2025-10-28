@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
 // id, size, x, y, opacity, animationDuration
 // id, size, x, y, opacity, animationDuration
@@ -11,11 +10,19 @@ export const StarBackground = () => {
   useEffect(() => {
     generateStars();
     generateMeteors();
+
+    const handleResize = () => {
+      generateStars();
+    };
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const generateStars = () => {
-    const numberOfStars = Math.floor(
-      (window.innerWidth * window.innerHeight) / 10000
+    const numberOfStars = Math.min(
+      120,
+      Math.max(15, Math.floor((window.innerWidth * window.innerHeight) / 15000))
     );
 
     const newStars = [];
