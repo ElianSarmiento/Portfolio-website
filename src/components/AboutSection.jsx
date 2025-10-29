@@ -1,3 +1,5 @@
+import { Briefcase, Code, User } from "lucide-react";
+
 export const AboutSection = () => {
   return (
     <section id="about" className="py-24 px-4 relative">
@@ -29,10 +31,64 @@ export const AboutSection = () => {
                 {" "}
                 Get In Touch
               </a>
+              <a
+                href="/ElianResume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
+              >
+                {" "}
+                Download Resume/CV
+              </a>
             </div>
           </div>
 
-          <div></div>
+          <div className="grid grid-cols-1 gap-6">
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Code className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg"> Web Development</h4>
+                  <p className="text-muted-foreground">
+                    Builds responsive, accessible interfaces with React and
+                    Tailwind, keeping performance and UX front and center.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <User className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg"> UI/UX Design</h4>
+                  <p className="text-muted-foreground">
+                    Designs polished interfaces that guide users effortlessly,
+                    blending thoughtful layouts with meaningful interaction
+                    cues.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="gradient-border p-6 card-hover">
+              <div className="flex items-start gap-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Briefcase className="h-6 w-6 text-primary" />
+                </div>
+                <div className="text-left">
+                  <h4 className="font-semibold text-lg"> Project Management</h4>
+                  <p className="text-muted-foreground">
+                    Coordinates end-to-end delivery across JavaScript front ends
+                    and Python/Flask back ends, keeping SQLAlchemy + PostgreSQL
+                    layers aligned and on schedule.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
