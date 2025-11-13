@@ -1,20 +1,21 @@
 # Elian Sarmiento – Web Portfolio
 
-A React + Vite portfolio showcasing my frontend and fullstack projects, skill set, and contact info. Designed to give recruiters a quick, polished overview of my work with instant access to my résumé.
+A React + Vite portfolio showcasing my front-end and full-stack work, now live at [eliansarmiento.com](https://eliansarmiento.com). It highlights projects, skills, and contact options so recruiters can quickly evaluate my background and reach out.
 
 ## Features
-- Animated hero with CTA buttons and starry background
-- About section with service cards (web dev, UI/UX, project management)
-- Project highlights including stack summaries (HTML/CSS/JS, Flask, PostgreSQL, etc.)
-- Filterable skills grid covering frontend, backend, and tooling
-- EmailJS-powered contact form plus direct links to LinkedIn/Instagram
-- Responsive layout built with Tailwind CSS and custom “cosmic” button styles
+- Animated hero with CTA buttons and star-field background
+- About section with service cards (Web Development, UI/UX, Project Management)
+- Project highlights with stack summaries (HTML/CSS/JS, Flask, PostgreSQL, etc.)
+- Filterable skills grid for frontend, backend, and tooling expertise
+- EmailJS-powered contact form plus LinkedIn/Instagram links
+- Theme toggle (light/dark) visible on desktop and mobile
+- Deployed to Vercel with custom domain + SSL
 
 ## Tech Stack
 - React + Vite
 - Tailwind CSS
+- Lucide React Icons
 - EmailJS
-- Lucide React icons
 
 ## Getting Started
 ```bash
