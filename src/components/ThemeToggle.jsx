@@ -6,14 +6,27 @@ export const ThemeToggle = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
+    const applyTheme = (theme) => {
+      if (theme === "dark") {
+        document.documentElement.classList.add("dark");
+        setIsDarkMode(true);
+      } else {
+        document.documentElement.classList.remove("dark");
+        setIsDarkMode(false);
+      }
+      localStorage.setItem("theme", theme);
+    };
+
     const storedTheme = localStorage.getItem("theme");
-    if (storedTheme === "dark") {
-      setIsDarkMode(true);
-      document.documentElement.classList.add("dark");
-    } else {
-      localStorage.setItem("theme", "light");
-      setIsDarkMode(false);
+    if (storedTheme) {
+      applyTheme(storedTheme);
+      return;
     }
+
+    const prefersDarkOnSmallScreens =
+      window.matchMedia("(max-width: 640px)").matches;
+
+    applyTheme(prefersDarkOnSmallScreens ? "dark" : "light");
   }, []);
 
   const toggleTheme = () => {
@@ -33,7 +46,7 @@ export const ThemeToggle = () => {
       onClick={toggleTheme}
       className={cn(
         "fixed top-4 right-4 sm:top-5 sm:right-5 z-50 p-2 rounded-full transition-colors duration-300",
-        "focus:outline-hidden"
+        "focus:outline-hidden hidden sm:block"
       )}
       aria-label="Toggle theme"
     >

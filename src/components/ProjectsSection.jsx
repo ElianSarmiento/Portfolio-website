@@ -6,18 +6,20 @@ const projects = [
     title: "PlanIt",
     description:
       "A responsive HTML/CSS/JavaScript + Jinja interface sits on top of a Flask, SQLAlchemy, and PostgreSQL stack to organize tasks.",
-    image: "/projects/pic1.png",
+    image: "/projects/pic2.png",
     tags: ["HTML/CSS", "JavaScript", "Flask"],
-    // demoURL: "#",
+    githubUrl: "https://github.com/ElianSarmiento/PlanIt-App",
   },
   {
     id: 2,
     title: "Guessing Game",
     description:
       "A Web browser game utilizing HTML, CSS, and Javascript. It allows users to guess a number with the user receiving real time responses if they are close to the number.",
-    image: "/projects/pic2.png",
+    image: "/projects/pic1.png",
     tags: ["HTML", "CSS", "JavaScript"],
-    // demoURL: "#",
+    demoURL: "https://abolajialimi.github.io/guessin_game/guess_game.html",
+    githubUrl:
+      "https://github.com/abolajialimi/abolajialimi.github.io/tree/main/guessin_game",
   },
 ];
 
@@ -51,7 +53,10 @@ export const ProjectsSection = () => {
               <div className="p-6">
                 <div className="flex -wrap gap-2 mb-4">
                   {project.tags.map((tag) => (
-                    <span className="px=2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground">
+                    <span
+                      key={`${project.id}-${tag}`}
+                      className="px=2 py-1 text-xs font-medium border rounded-full bg-secondary text-secondary-foreground"
+                    >
                       {tag}
                     </span>
                   ))}
@@ -61,29 +66,32 @@ export const ProjectsSection = () => {
                 <p className="text-muted-foreground text-sm mb-4">
                   {project.description}
                 </p>
-                {/* <p></p>
-               <div className="flex justify-between items-center">
-                {" "}
-                // UPDATE THIS WITH URL LINK
-                <div className="flex space-x-3 ">
-                  <a
-                    href={project.demoURL}
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    target="_blank"
-                  >
-                    <ExternalLink size={20}/>
-                  </a>
-                  <a
-                    href={githubUrl}
-                    className="text-foreground/80 hover:text-primary transition-colors duration-300"
-                    target="_blank"
-                  >
-                    <Github size={20}/>
-                  </a>
-                </div>
-              
-              UPDATE THIS WITH URL LINKS 
-              <p></p> */}
+                {(project.demoURL || project.githubUrl) && (
+                  <div className="flex justify-between items-center">
+                    <div className="flex space-x-3">
+                      {project.demoURL && (
+                        <a
+                          href={project.demoURL}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        >
+                          <ExternalLink size={20} />
+                        </a>
+                      )}
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="text-foreground/80 hover:text-primary transition-colors duration-300"
+                        >
+                          <Github size={20} />
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           ))}
