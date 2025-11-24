@@ -142,6 +142,7 @@
 }
 
 .dark .meteor {
+  display: block;
   background: linear-gradient(90deg, #f7f6f5, #efefec, transparent);
   box-shadow: 0 0 10px 2px rgba(255, 149, 58, 0.45);
 }
