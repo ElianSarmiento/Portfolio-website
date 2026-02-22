@@ -5,24 +5,23 @@ const skills = [
   // FrontEnd
   { name: "HTML/CSS", level: 95, category: "frontend" },
   { name: "JavaScript", level: 80, category: "frontend" },
-  { name: "React", level: 75, category: "frontend" },
+  { name: "React", level: 70, category: "frontend" },
   { name: "TailWind CSS", level: 90, category: "frontend" },
-  { name: "Next.js", level: 50, category: "frontend" },
+  { name: "Next.js", level: 40, category: "frontend" },
 
   // Backend
-  { name: "Python", level: 95, category: "backend" },
-  { name: "Flask", level: 85, category: "backend" },
+  { name: "Python", level: 90, category: "backend" },
+  { name: "Flask", level: 80, category: "backend" },
   { name: "PostgreSQL", level: 80, category: "backend" },
   { name: "pgAdmin", level: 70, category: "backend" },
-  { name: "Docker", level: 60, category: "backend" },
-  { name: "REST API Design", level: 70, category: "backend" },
+  { name: "REST API Design", level: 60, category: "backend" },
 
   // Tools
   { name: "Git/Github", level: 95, category: "tools" },
   { name: "VS Code", level: 95, category: "tools" },
   { name: "Pip", level: 85, category: "tools" },
   { name: "Vite", level: 95, category: "tools" },
-  { name: "Postman", level: 75, category: "tools" },
+  { name: "Postman", level: 65, category: "tools" },
 ];
 const categories = ["all", "frontend", "backend", "tools"];
 
