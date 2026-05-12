@@ -22,10 +22,10 @@ export const HeroSection = () => {
 
           <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-4">
             I love creating unique web experiences that push what’s possible
-            with modern, innovative technologies. Specializing in front-end
+            with modern, innovative technologies. Specializing in front end
             development lets me blend clean architecture with expressive
             visuals, ensuring every interface feels alive and intuitive. My goal
-            on every project is to go well beyond expectations—delivering
+            on every project is to go well beyond expectations delivering
             polished, engaging products that surprise users and make a lasting
             impression.
           </p>

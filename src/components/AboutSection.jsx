@@ -21,7 +21,7 @@ export const AboutSection = () => {
             </p>
             <p className="text-muted-foreground">
               In my free time you’ll usually find me exploring what other
-              creative developers are building—sketches, prototypes, wild
+              creative developers are building sketches, prototypes, wild
               experiments. Seeing how they approach problems keeps me inspired
               and sparks new ideas for my own work.
             </p>
@@ -81,7 +81,7 @@ export const AboutSection = () => {
                 <div className="text-left">
                   <h4 className="font-semibold text-lg"> Project Management</h4>
                   <p className="text-muted-foreground">
-                    Coordinates end-to-end delivery across JavaScript front ends
+                    Coordinates end to end delivery across JavaScript front ends
                     and Python/Flask back ends, keeping SQLAlchemy + PostgreSQL
                     layers aligned and on schedule.
                   </p>
